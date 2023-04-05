@@ -73,20 +73,24 @@ RSpec.describe Park do
   end
 
   describe '#revenue' do
-    it 'can calculate revenue generated' do
+    xit 'can calculate revenue generated based on number of adults' do
       denver_city_park = Park.new("Denver City Park", 10)
       vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
       vehicle_2 = Vehicle.new("2013", "Jeep", "Grand Cherokee")
+      vehicle_3 = Vehicle.new("2008", "Honda", "Pilot")
       charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+      jeff = Passenger.new({"name" => "Jeff", "age" => 23})
       taylor = Passenger.new({"name" => "Taylor", "age" => 12})
 
       vehicle_1.add_passenger(charlie)
       vehicle_2.add_passenger(taylor)
+      vehicle_3.add_passenger(jeff)
 
       denver_city_park.enter_park(vehicle_1)
       denver_city_park.enter_park(vehicle_2)
+      denver_city_park.enter_park(vehicle_3)
 
-      expect()
+      expect(denver_city_park.revenue).to eq 20
     end
   end
 

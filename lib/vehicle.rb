@@ -4,7 +4,8 @@ class Vehicle
               :model,
               :speeding,
               :passengers,
-              :park_passengers
+              :park_passengers,
+              :num_adults
 
   def initialize(year, make, model)
     @year = year
@@ -32,7 +33,4 @@ class Vehicle
     @passengers.count(&:adult?)
   end
 
-  def park_passengers
-
-  end
 end
