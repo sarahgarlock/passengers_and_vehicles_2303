@@ -4,8 +4,7 @@ class Vehicle
               :model,
               :speeding,
               :passengers,
-              :park_passengers,
-              :num_adults
+              :park_passengers
 
   def initialize(year, make, model)
     @year = year
