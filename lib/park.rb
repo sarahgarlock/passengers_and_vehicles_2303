@@ -20,9 +20,9 @@ class Park
     @vehicles_entered.map(&:passengers).flatten
   end
 
-  # def revenue
-  #   adult_passengers = passengers.select { |passenger| passenger.adult? }
-  #   adult_passengers.count * @price
-  # end
+  def revenue
+    adult_passengers = passengers.select { |passenger| passenger.adult? }
+    adult_passengers.count * @price
+  end
   
 end

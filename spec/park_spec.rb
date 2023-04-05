@@ -73,7 +73,7 @@ RSpec.describe Park do
   end
 
   describe '#revenue' do
-    xit 'can calculate revenue generated based on number of adults' do
+    it 'can calculate revenue generated based on number of adults' do
       denver_city_park = Park.new("Denver City Park", 10)
       vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
       vehicle_2 = Vehicle.new("2013", "Jeep", "Grand Cherokee")
