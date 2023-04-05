@@ -16,4 +16,10 @@ class Park
     @vehicles_entered.count
   end
 
+  def passengers
+    @vehicles_entered.map(&:passengers).flatten
+  end
+
+  
+  
 end

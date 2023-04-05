@@ -54,5 +54,41 @@ RSpec.describe Park do
     end
   end
 
+  describe '#passengers' do
+    it 'can list all passengers in park' do
+      denver_city_park = Park.new("Denver City Park", 10)
+      vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
+      vehicle_2 = Vehicle.new("2013", "Jeep", "Grand Cherokee")
+      charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+      taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
+      vehicle_1.add_passenger(charlie)
+      vehicle_2.add_passenger(taylor)
+
+      denver_city_park.enter_park(vehicle_1)
+      denver_city_park.enter_park(vehicle_2)
+
+      expect(denver_city_park.passengers).to eq([charlie, taylor])
+    end
+  end
+
+  describe '#revenue' do
+    it 'can calculate revenue generated' do
+      denver_city_park = Park.new("Denver City Park", 10)
+      vehicle_1 = Vehicle.new("2001", "Honda", "Civic")
+      vehicle_2 = Vehicle.new("2013", "Jeep", "Grand Cherokee")
+      charlie = Passenger.new({"name" => "Charlie", "age" => 18})
+      taylor = Passenger.new({"name" => "Taylor", "age" => 12})
+
+      vehicle_1.add_passenger(charlie)
+      vehicle_2.add_passenger(taylor)
+
+      denver_city_park.enter_park(vehicle_1)
+      denver_city_park.enter_park(vehicle_2)
+
+      expect()
+    end
+  end
+
 
 end
