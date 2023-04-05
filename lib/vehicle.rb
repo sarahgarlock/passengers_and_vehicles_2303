@@ -1,5 +1,3 @@
-require 'pry'
-
 class Vehicle
   attr_reader :year,
               :make,
@@ -27,5 +25,9 @@ class Vehicle
 
   def add_passenger(passenger)
     @passengers << passenger
+  end
+
+  def num_adults
+    @passengers.count(&:adult?)
   end
 end
